@@ -15,8 +15,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n        <div class=\"jumbotron\">\n            <h1>Welcome to our app!</h1>\n        </div>\n    ",
-        styles: ["\n        .jumbotron { box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }\n    "]
+        template: "\n        <card-color-filter></card-color-filter>\n    "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

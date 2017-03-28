@@ -2,10 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>My Angular 2 App!</title>
+        <title>Main Page</title>
 
         <!--CSS-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <style>body{ padding: 50px 0; }</style>
 
         <!--JS-->
@@ -21,10 +22,58 @@
         <script>
             System.import('app').catch(function(err) { console.error(err); });
         </script>
+
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     </head>
 
     <body class="container">
-        <my-app></my-app>
+
+    <div id="sidebar">
+
+        <ul>
+            <li><a href="index.html">Main Page</a></li>
+            <li><a href="TeamMembers.html">Team Members</a></li>
+            <li><a href="GraphsAndData.html">Graphs and Data</a></li>
+            <li><a href="CompletedBoard.html">Completed Board</a></li>
+            <li><a href="javascript:void(0)" onclick="exportExcel();">Export to Excel</a></li>
+            <li><a href="javascript:void(0)" onclick="tba();">Change Completed Board</a></li>
+            <li><a href="javascript:void(0)" onclick="tba();">Change Default Board</a></li>
+            <li><a href="javascript:void(0)" onclick="tba();">Last Accessed Board</a></li>
+        </ul>
+
+
+        <div id="sidebar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <h1 align="center">Main page with Trello information</h1>
+
+
+    <script>
+        /**
+         * Created by Brian on 3/19/2017.
+         */
+        function exportExcel(){
+            alert("Exporting!");
+        }
+
+        function tba(){
+            alert("To be added");
+        }
+
+        $(document).ready(function(){
+            $('#sidebar-btn').click(function(){
+                $('#sidebar').toggleClass('visible');
+            });
+        });
+    </script>
+
+    <my-app></my-app>
     </body>
 
 </html>
