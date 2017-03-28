@@ -1,0 +1,109 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-family:"Helvetica Neue", Helvetica, Arial;
+}
+
+#sidebar{
+    background:#026AA7;
+    width:200px;
+    height:100%;
+    display:block;
+    position:absolute;
+    left:-200px;
+    top:0px;
+    transition: left 0.2s ease-out;
+}
+
+#sidebar.visible{
+    left:0px;
+    transition:left 0.2s ease-out;
+}
+
+ul{
+    margin:0px;
+    padding:0px;
+}
+
+ul list{
+    list-style:none;
+}
+
+ul li a{
+    background:#4E87C2;
+    color:#FFFFFF;
+    border-bottom:1px solid #026AA7;;
+    display:block;
+    width:180px;
+    padding:10px;
+    text-decoration: none;
+}
+
+#sidebar-btn{
+    display:inline-block;
+    vertical-align: middle;
+    width:20px;
+    height:15px;
+    cursor:pointer;
+    margin:20px;
+    position:absolute;
+    top:0px;
+    right:-60px;
+}
+
+#sidebar-btn span{
+    height:1px;
+    background:#111;
+    margin-bottom:5px;
+    display:block;
+}
+
+#sidebar-btn span:nth-child(2){
+    width:75%;
+}
+
+#sidebar-btn span:nth-child(3){
+    width:50%;
+}
+
+.jumbotron { box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }
+
+.box {
+    float: left;
+    width: 150px;
+    height: 170px;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.smallButton {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.red {
+    color: #ff0000;
+    background-color: #ff0000;
+}
+.green {
+    color: #00ff00;
+    background-color: #00ff00;
+}
+.yellow {
+    color: #ffff00;
+    background-color: #ffff00;
+}
+
+.blue {
+    background: #026AA7;
+}
+
+#menu ul{
+    list-style: none;
+}
+#menu li{
+    display: inline;
+}
