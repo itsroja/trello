@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{title}}</h3>
+  </div>
+  <div class="panel-body">
+    <card *ngFor="let card of cardlist"
+      [title]="card.title"
+      [description]="card.description">
+    </card>
+  </div>
+  <!-- This is in the original Trello site, but since
+       we are not copying the ability to manipulate cards
+       into our site this is not needed here
+  -->
+  <!-- <div class="panel-footer">Add a card...</div> -->
+</div>
