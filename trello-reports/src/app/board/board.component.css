@@ -1,0 +1,9 @@
+.panel-body {
+  overflow-x: scroll;
+  width: 230rem; /* TODO: make this dynamic based on number of cardlists */
+  height: 50rem;
+}
+.panel-container {
+    overflow-x: scroll;
+    width: 130rem;
+}
