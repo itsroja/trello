@@ -5,12 +5,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
-var card_color_filter_component_1 = require("./components/card-color-filter.component");
-var http_1 = require("@angular/http");
+var ng2_charts_1 = require("ng2-charts");
+//Import the component, Use the class name in the curly braces
+var example_component_1 = require("./components/example.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -18,8 +18,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-        declarations: [app_component_1.AppComponent, card_color_filter_component_1.CardColorFilterComponent],
+        imports: [platform_browser_1.BrowserModule, ng2_charts_1.ChartsModule],
+        declarations: [app_component_1.AppComponent, example_component_1.ExampleComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

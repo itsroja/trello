@@ -15,7 +15,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n        <card-color-filter></card-color-filter>\n    "
+        template: "\n        <example></example>\n    "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

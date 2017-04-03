@@ -15,45 +15,32 @@ require("rxjs/add/operator/map");
 var HttpService = (function () {
     function HttpService(_http) {
         this._http = _http;
-        this.token = '5d64107672a08034368ba4c972d9be47f46d16066d390e908753ebc649e197ca';
-        this.key = '92700dc44a5bc49b595ee9837aeb9a78';
         this.boardID = 'rvPpS2c8';
+        this.trello = Trello;
+        this.trello.authorize();
     }
     HttpService.prototype.fetchBoard = function (bID) {
         if (bID === void 0) { bID = this.boardID; }
-        return this._http.get('https://api.trello.com/1/board/' + bID + '?key=' + this.key + '&token=' + this.token)
-            .map(function (res) { return res.json(); });
+        console.log(this.trello.get("/boards/" + this.boardID));
     };
     HttpService.prototype.fetchMember = function (username) {
         if (username != null)
-            return this._http.get('https://api.trello.com/1/members/' + username +
-                '?fields=username,fullName,url&boards=all&board_fields=name&organizations=all&organization_fields=displayName&key=' +
-                this.key + '&token=' + this.token);
+            return this.trello.get("/members/" + username);
     };
     HttpService.prototype.fetchMembers = function (bID) {
         if (bID === void 0) { bID = this.boardID; }
-        return this._http.get('https://api.trello.com/1/board/' + bID + '/members?key=' + this.key + '&token=' + this.token)
-            .map(function (res) { return res.json(); });
+        return this.trello.get("/boards/" + bID + "/members");
     };
     HttpService.prototype.fetchLists = function (bID) {
         if (bID === void 0) { bID = this.boardID; }
-        return this._http.get('https://api.trello.com/1/board/' + bID + '/lists??cards=open&card_fields=name&fields=name&key=' +
-            this.key + '&token=' + this.token).map(function (res) { return res.json(); });
+        return Promise.resolve(this.trello.get("/boards/" + bID + "/lists"));
     };
     HttpService.prototype.fetchCards = function (bID) {
         if (bID === void 0) { bID = this.boardID; }
-        return this._http.get('https://api.trello.com/1/board/' + this.boardID + '/cards?fields=name,idList,url&key=' +
-            this.key + '&token=' + this.token).map(function (res) { return res.json(); });
+        return this.trello.get("/boards/" + bID + "/cards");
     };
     HttpService.prototype.fetchListCards = function (listID) {
-        return this._http.get('https://api.trello.com/1/lists/' + listID + '/cards?key=' + this.key + '&token=' + this.token)
-            .map(function (res) { return res.json(); });
-    };
-    HttpService.prototype.setToken = function (t) {
-        this.token = t;
-    };
-    HttpService.prototype.setKey = function (k) {
-        this.key = k;
+        return this.trello.get("/lists/" + listID + "/cards");
     };
     HttpService.prototype.setBoard = function (b) {
         this.boardID = b;
