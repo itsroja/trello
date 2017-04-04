@@ -10,43 +10,7 @@ import { ChartsModule } from 'ng2-charts';                                      
 //Decorator needed for all components
 @Component({
     selector: 'example',                //The custom html tag used for your component. Name it the same as your component name
-    template: `
-        <!--This is where you put your html code-->
-
-        <!--Pie Chart-->
-        <div class="col-md-5" style="display: block">
-            <canvas baseChart width="50" height="50"
-                [data]="pieChartData"
-                [labels]="pieChartLabels"
-                [chartType]="pieChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)">
-            </canvas>
-        </div>
-
-        <!--Bar Graph-->
-        <div class="col-md-5" style="display: block">
-            <canvas baseChart
-                [datasets]="barChartData"
-                [labels]="barChartLabels"
-                [options]="barChartOptions"
-                [legend]="barChartLegend"
-                [chartType]="barChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)">
-            </canvas>
-        </div>
-
-        <button (click)="getData()">Get</button>
-        <br><br>
-
-        <!--Output the data from the api in a list-->
-        <ul>
-            <li *ngFor="let list of lists">         <!--Angular for loop-->
-                {{ list.name }}
-            </li>
-        </ul>
-    `,
+    templateUrl: 'example.component.html',
     providers: [TrelloService]                  //This is where you put all the services you need for your component
                                                 //You should be able to copy and paste this as it is
 })
