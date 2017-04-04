@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { TrelloService } from './services/trello.service';
+import { HttpService } from './services/http.service';
 import { DataService } from './services/data.service';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
@@ -23,7 +25,11 @@ import { BoardComponent } from './board/board.component';
     FormsModule,
     HttpModule
   ],
-  providers: [DataService],
+  providers: [
+    DataService,
+    HttpService,
+    TrelloService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
