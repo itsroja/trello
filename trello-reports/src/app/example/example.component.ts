@@ -10,7 +10,7 @@ import { ChartsModule } from 'ng2-charts';                                      
 //Decorator needed for all components
 @Component({
     selector: 'example',                //The custom html tag used for your component. Name it the same as your component name
-    templateUrl: 'example.component.html',
+    templateUrl: './example.component.html',
     providers: [TrelloService]                  //This is where you put all the services you need for your component
                                                 //You should be able to copy and paste this as it is
 })
