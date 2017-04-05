@@ -11,7 +11,11 @@
              Boards
            </a>
            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-             <a class="dropdown-item" href="#" *ngFor="let board of myBoards">{{board.title}}</a>
+             <a class="dropdown-item" href="#"
+             (click)="boardSelected(board)"
+             *ngFor="let board of myBoards">
+               {{board.title}}
+             </a>
            </div>
          </li>
       <li class="nav-item">

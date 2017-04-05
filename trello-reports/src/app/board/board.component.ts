@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Board } from '../models/board';
 import { DataService } from '../services/data.service';
+import { BroadcastService } from '../services/broadcast.service';
 
 @Component({
   selector: 'board',
@@ -12,16 +13,29 @@ export class BoardComponent implements OnInit {
   public name: string = 'Board 1';
   public myBoard: Board;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService,
+      private broadcastService: BroadcastService) {
+        broadcastService.getBoardIdBroadcast().subscribe(
+            id => {
+              this.loadData(id);
+            },
+            err => {
 
+            },
+            () => { /* called when completed */
+
+            }
+        );
   }
 
   ngOnInit() {
-    this.loadData();
+    /* load the first board by default; will be overridden by broadcastService*/
+    this.loadData(1);
   }
 
-  public loadData() {
+  public loadData(id: number) {
+    console.log('loading board with id: ' + id);
     /* fetch the board with the given id */
-    this.myBoard = this.dataService.getBoard(1);
+    this.myBoard = this.dataService.getBoard(id);
   }
 }

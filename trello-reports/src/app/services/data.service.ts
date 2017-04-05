@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+
 import { Card } from '../models/card';
 import { Board } from '../models/board';
 
@@ -10,6 +13,8 @@ export class DataService {
 
     constructor(private http: Http) {
       var allLists: Array<Array<Card>> = new Array<Array<Card>>();
+
+      // TODO: replace this placeholder data by pushing
       var list1: Array<Card> = new Array<Card>();
       var list2: Array<Card> = new Array<Card>();
       var list3: Array<Card> = new Array<Card>();
@@ -25,9 +30,11 @@ export class DataService {
 
 
       var board: Board = new Board('New Hire Onboarding', 1, allLists);
+      var board2: Board = new Board('Number 2', 2, allLists);
 
       this._boards = new Array<Board>();
       this._boards.push(board);
+      this._boards.push(board2);
 
 
       /* simple demo of making http GET request to API */

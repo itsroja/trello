@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ChartsModule } from 'ng2-charts';
 
+import { BroadcastService } from './services/broadcast.service';
 import { TrelloService } from './services/trello.service';
 import { HttpService } from './services/http.service';
 import { DataService } from './services/data.service';
@@ -30,7 +31,8 @@ import { BoardComponent } from './board/board.component';
   providers: [
     DataService,
     HttpService,
-    TrelloService
+    TrelloService,
+    BroadcastService
   ],
   bootstrap: [AppComponent]
 })
