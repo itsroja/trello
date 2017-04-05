@@ -15,7 +15,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n        <example></example>\n    "
+        template: "\n        <div>\n            <hamburger></hamburger>\n        </div>\n        <div>\n        <h1 align=\"center\">Main page with Trello information</h1></div>\n        <graphs></graphs>\n    "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

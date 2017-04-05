@@ -1,0 +1,24 @@
+<div class={{buttonClasses}} (click)="hamburgerClick()">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+
+
+    <div  *ngIf="visible">
+        <ul>
+            <li><a>Main Page</a></li>
+            <li><a>Team Members</a></li>
+            <li><a>Graphs and Data</a></li>
+            <li><a>Completed Board</a></li>
+            <li><a href="javascript:void(0)" onclick="exportExcel();">Export to Excel</a></li>
+            <li><a href="javascript:void(0)" onclick="tba();">Change Completed Board</a></li>
+            <li><a href="javascript:void(0)" onclick="tba();">Change Default Board</a></li>
+            <li><a href="javascript:void(0)" onclick="tba();">Last Accessed Board</a></li>
+        </ul>
+    </div>
+</div>
+<!--
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+-->
