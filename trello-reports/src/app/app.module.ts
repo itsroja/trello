@@ -13,7 +13,8 @@ import { CardComponent } from './card/card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CardlistComponent } from './cardlist/cardlist.component';
 import { BoardComponent } from './board/board.component';
-import { ExampleComponent } from './example/example.component';
+import { HamburgerComponent } from './hamburger/hamburger.component';
+import { GraphsComponent } from './graphs/graphs.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ExampleComponent } from './example/example.component';
     NavbarComponent,
     CardlistComponent,
     BoardComponent,
-    ExampleComponent
+    HamburgerComponent,
+    GraphsComponent
   ],
   imports: [
     BrowserModule,
