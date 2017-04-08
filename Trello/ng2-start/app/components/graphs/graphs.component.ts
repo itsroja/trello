@@ -5,23 +5,27 @@ import { ChartsModule } from 'ng2-charts';
 @Component({
     selector: 'graphs',
     templateUrl: '/app/components/graphs/graphs.component.html',
+    styleUrls: ['app/components/graphs/graphs.component.css'],
     providers: [TrelloService]
 })
 
 export class GraphsComponent {
-    members = [];
-    memberCards = [];
     boardID: string = 'rvPpS2c8';
+    members: string[];
+    totalStoryPoints: number;
+    memberStoryPoints: number[];
 
-    constructor(public trelloService: TrelloService, public ref: ChangeDetectorRef){}
+    constructor(public trelloService: TrelloService, public ref: ChangeDetectorRef){
+        this.getData();
+    }
 
     //******************************************Pie Chart*********************************************//
     public pieChartOptions:any = {
         responsive: true
     };
 
-    public pieChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-    public pieChartData:number[] = [300, 500, 100];
+    public pieChartLabels:string[] = [];//['Ahmed', 'Brian', 'Josh', 'Roja', 'Theran', 'David', 'Taylor', 'Jayme'];
+    public pieChartData:number[] = [9, 3, 4, 8, 6, 1, 5, 4];
     public pieChartType:string = 'pie';
 
     // events
@@ -52,18 +56,29 @@ export class GraphsComponent {
     //*******************************************************************************************//
 
     getData(){
-        this.trelloService.trello.get('/boards/' + this.boardID + '/members',
-            (members) =>
-                this.getCards(members),
-                this.ref.markForCheck());
+        this.trelloService.trello.get('/boards/' + this.boardID + '/members', (members) => this.setMembers(members));
+    }
+
+    setMembers(members){
+        this.members = members;
+        var m = [];
+        for(let member of members){
+            m.push(member.fullName);
+        }
+        this.pieChartLabels = m;
+        this.ref.markForCheck();
+        //this.getCards(members);
     }
 
     getCards(members){
         for(let member of members){
-            this.trelloService.trello.get('/boards/' + this.boardID + '/members/' + member.id + '/cards',
-                (cards) =>
-                    console.log(cards)
-                );
+            this.trelloService.trello.get('/boards/' + this.boardID + '/members/' + member.id + '/cards', (cards) => this.printCardNames(cards));
+        }
+    }
+
+    printCardNames(cards){
+        for(let card of cards){
+            console.log(card.name);
         }
     }
 }

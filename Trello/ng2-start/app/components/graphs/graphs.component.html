@@ -1,5 +1,5 @@
 <div class="col-md-5" style="display: block">
-    <canvas baseChart width="50" height="50"
+    <canvas baseChart
         [data]="pieChartData"
         [labels]="pieChartLabels"
         [chartType]="pieChartType"
@@ -20,9 +20,6 @@
         (chartClick)="chartClicked($event)">
     </canvas>
 </div>
-
-<button (click)="getData()">Get</button>
-<br><br>
 
 <!--Output the data from the api in a list-->
 <ul>

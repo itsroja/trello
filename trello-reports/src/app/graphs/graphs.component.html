@@ -1,16 +1,19 @@
-<div class="col-md-5" style="display: block">
-    <canvas baseChart width="50" height="50"
+<div style="display: block">
+    <canvas width="500" height="500" baseChart
         [data]="pieChartData"
         [labels]="pieChartLabels"
+        [options]="pieChartOptions"
         [chartType]="pieChartType"
         (chartHover)="chartHovered($event)"
         (chartClick)="chartClicked($event)">
     </canvas>
 </div>
 
+<br><br>
+
 <!--Bar Graph-->
-<div class="col-md-5" style="display: block">
-    <canvas baseChart
+<div style="display: block">
+    <canvas height="400" baseChart
         [datasets]="barChartData"
         [labels]="barChartLabels"
         [options]="barChartOptions"
@@ -20,13 +23,3 @@
         (chartClick)="chartClicked($event)">
     </canvas>
 </div>
-
-<button (click)="getData()">Get</button>
-<br><br>
-
-<!--Output the data from the api in a list-->
-<ul>
-    <li *ngFor="let cards of memberCards">         <!--Angular for loop-->
-        {{ cards.name }}
-    </li>
-</ul>
