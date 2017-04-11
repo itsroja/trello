@@ -5,7 +5,7 @@ import { ChartsModule } from 'ng2-charts';
 @Component({
     selector: 'graphs',
     templateUrl: './graphs.component.html',
-    styleUrls: ['./graphs.component.css'],
+    //styleUrls: ['./graphs.component.css'],
     providers: [TrelloService]
 })
 

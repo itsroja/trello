@@ -1,9 +1,9 @@
 import { Component, ChangeDetectorRef} from '@angular/core';
-import { TrelloService } from '../../services/trello.service';
+import { TrelloService } from '../services/trello.service';
 @Component({
     selector: 'team',
-    templateUrl: '/app/components/team/team.component.html',
-    styleUrls: ['app/components/team/team.component.css'],
+    templateUrl: './team.component.html',
+    styleUrls: ['./team.component.css'],
     providers: [TrelloService]
 
 })
