@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e227223e-80a4-4e73-bbeb-a4e8c853a6e2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Trello/main.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Trello/testTeam.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Trello.zip" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Trello/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/CompletedBoard.html" afterPath="$PROJECT_DIR$/Trello/CompletedBoard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/GraphsAndData.html" afterPath="$PROJECT_DIR$/Trello/GraphsAndData.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/TeamMembers.html" afterPath="$PROJECT_DIR$/Trello/TeamMembers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/index.html" afterPath="$PROJECT_DIR$/Trello/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/app.component.js" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/app.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/app.component.js.map" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/app.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/app.component.ts" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/app.module.js" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/app.module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/app.module.js.map" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/app.module.ts" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.js" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.js.map" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.ts" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.html" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.html" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.js" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.js.map" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.ts" afterPath="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Trello/style.css" afterPath="$PROJECT_DIR$/Trello/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trello-reports/reference-html/TeamMembers.html" afterPath="$PROJECT_DIR$/trello-reports/reference-html/TeamMembers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trello-reports/src/app/app.module.ts" afterPath="$PROJECT_DIR$/trello-reports/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trello-reports/src/app/graphs/graphs.component.html" afterPath="$PROJECT_DIR$/trello-reports/src/app/graphs/graphs.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trello-reports/src/app/graphs/graphs.component.ts" afterPath="$PROJECT_DIR$/trello-reports/src/app/graphs/graphs.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,15 +44,47 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <marker date="1491891002242" expanded="true" signature="109:160" ph="..." />
-                <marker date="1491891002242" expanded="true" signature="174:246" ph="..." />
+                <marker date="1491895578882" expanded="true" signature="109:160" ph="..." />
+                <marker date="1491895578882" expanded="true" signature="174:246" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphs.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/example.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-136">
+              <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/main.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,8 +92,8 @@
       <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+            <state relative-caret-position="119">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#256#322#0" expanded="true" />
               </folding>
@@ -51,21 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeamMembers.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Trello/ng2-start/TeamMembers.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="team.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="1453">
+              <caret line="106" column="46" lean-forward="false" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -73,21 +113,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.html">
+      <file leaf-file-name="team.component.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/trello-reports/src/app/team/team.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.component.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.css">
+      <file leaf-file-name="team.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hamburger.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hamburger.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -108,6 +168,12 @@
     <findStrings>
       <find>ChangeDetectorRef</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\Titus Station\Desktop\Trello\trello\trello-reports\src\app\team</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,19 +195,22 @@
         <option value="$PROJECT_DIR$/trello-reports/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/trello-reports/reference-html/TeamMembers.html" />
         <option value="$PROJECT_DIR$/Trello/ng2-start/index.html" />
-        <option value="$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.ts" />
-        <option value="$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.html" />
         <option value="$PROJECT_DIR$/Trello/ng2-start/TeamMembers.html" />
-        <option value="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.ts" />
-        <option value="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.html" />
-        <option value="$PROJECT_DIR$/Trello/ng2-start/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.ts" />
+        <option value="$PROJECT_DIR$/Trello/ng2-start/app/components/routing/routing.component.ts" />
+        <option value="$PROJECT_DIR$/Trello/ng2-start/app/routing.component.ts" />
+        <option value="$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.html" />
         <option value="$PROJECT_DIR$/Trello/ng2-start/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/Trello/ng2-start/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.html" />
+        <option value="$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.ts" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
     <package-json value="$PROJECT_DIR$/Trello/ng2-start/package.json" />
+    <package-json value="$PROJECT_DIR$/trello-reports/package.json" />
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -149,6 +218,7 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/Trello/ng2-start/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
@@ -171,8 +241,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,6 +250,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello-reports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello-reports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello-reports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -295,8 +417,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng2-start" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hamburger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,6 +465,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Titus Station\Desktop\Trello\trello\trello-reports\src\app" />
+      <recent name="C:\Users\Titus Station\Desktop\Trello\trello\trello-reports\src\app\team" />
       <recent name="C:\Users\Titus Station\Desktop\Trello\trello\Trello\ng2-start\app\components\hamburger" />
     </key>
   </component>
@@ -464,12 +619,13 @@
       <workItem from="1491450091042" duration="19903000" />
       <workItem from="1491855306587" duration="1033000" />
       <workItem from="1491857002188" duration="21815000" />
-      <workItem from="1491887899042" duration="2867000" />
+      <workItem from="1491887899042" duration="4968000" />
+      <workItem from="1491893877550" duration="8551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65092000" />
+    <option name="totallyTimeSpent" value="75744000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,11 +640,12 @@
     <frame x="-7" y="0" width="1244" height="735" extended-state="0" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495854" sideWeight="0.41968912" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495854" sideWeight="0.4119171" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.50331676" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495854" sideWeight="0.5803109" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495854" sideWeight="0.5880829" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.49668324" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495854" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -499,7 +656,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -572,38 +728,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/trello-reports/.angular-cli.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team-drop-menu.component.ts" />
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/card-color-filter.component.ts" />
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/services/http.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger.component.ts" />
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/typings/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/GraphsAndData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/GraphsAndData.html" />
     <entry file="file://$PROJECT_DIR$/Trello/style.css" />
     <entry file="file://$PROJECT_DIR$/Trello/CompletedBoard.html" />
     <entry file="file://$PROJECT_DIR$/trello-reports/reference-html/CompletedBoard.html">
@@ -698,14 +822,6 @@
     <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/dropdown.component.ts" />
     <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team-drop.component.css" />
     <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team-members.component.ts" />
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team/TeamMember.component.ts" />
     <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/app.component.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -724,7 +840,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trello-reports/src/app/team/team.component.js" />
     <entry file="file://$PROJECT_DIR$/trello-reports/reference-html/TeamMembers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -746,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/example.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trello-reports/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -768,7 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.ts" />
     <entry file="file://$PROJECT_DIR$/Trello/TeamMembers.html" />
     <entry file="file://$PROJECT_DIR$/Trello/index.html" />
     <entry file="file://$PROJECT_DIR$/Trello/ng2-start/CompletedBoard.html">
@@ -778,21 +885,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.html" />
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.html" />
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,21 +900,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.html">
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.ts">
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -830,24 +924,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/trello-reports/src/app/navbar/navbar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trello-reports/src/app/team/team/team.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trello-reports/src/app/team/team.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trello-reports/src/app/team/team.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trello-reports/src/app/team/team.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/graphs/graphs.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/routing/routing.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/hamburger/hamburger.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/routing.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1491895578882" expanded="true" signature="109:160" ph="..." />
+            <marker date="1491895578882" expanded="true" signature="174:246" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#256#322#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/app.component.ts">
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/example.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="-136">
+          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trello/ng2-start/app/components/team/team.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1453">
+          <caret line="106" column="46" lean-forward="false" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
           <folding>
-            <marker date="1491891002242" expanded="true" signature="109:160" ph="..." />
-            <marker date="1491891002242" expanded="true" signature="174:246" ph="..." />
+            <element signature="e#0#60#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trello-reports/src/app/team/team.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

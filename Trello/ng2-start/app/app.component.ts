@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
         </div>
         <div>
         <h1 align="center">Main page with Trello information</h1></div>
-        <team></team>
+        <my-app></my-app>
+        
     `
 })
+
 export class AppComponent {}

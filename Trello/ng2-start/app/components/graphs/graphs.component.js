@@ -80,7 +80,6 @@ GraphsComponent = __decorate([
     core_1.Component({
         selector: 'graphs',
         templateUrl: '/app/components/graphs/graphs.component.html',
-        styleUrls: ['app/components/graphs/graphs.component.css'],
         providers: [trello_service_1.TrelloService]
     }),
     __metadata("design:paramtypes", [trello_service_1.TrelloService, core_1.ChangeDetectorRef])

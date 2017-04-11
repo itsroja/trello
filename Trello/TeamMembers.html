@@ -25,12 +25,21 @@
         <span></span>
         <span></span>
     </div>
-
 </div>
 
 <h1 align="center">Team page with members</h1>
 
+<form class="form-horizontal" id="boards_form">
+    <div class="form-group">
+        <label class="control-label">Choose your board</label>
+        <select class="form-control" id="boards"></select>
+    </div>
+</form>
+
+<div align="center" id="output"></div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://api.trello.com/1/client.js?key=918b84447fcafe8181ec66322ac88757"></script>
 <script src="main.js"></script>
 
 <script>
@@ -41,6 +50,58 @@
         });
     });
 
+    var loadedBoards = function(boards) {
+        $.each(boards, function(index, value) {
+            $('#boards')
+                .append($("<option></option>")
+                    .attr("value",value.id)
+                    .text(value.name));
+        });
+    };
+
+    var loadBoards = function() {
+        //Get the users boards
+        Trello.get(
+            '/members/me/boards/',
+            loadedBoards,
+            function() { console.log("Failed to load boards"); }
+        );
+    };
+
+    // Function to load members
+    var loadedMembers = function(members) {
+        //For each member, append the .fullName to the output
+        $.each(members, function(index, member) {
+            var member = $("<p>" + member.fullName + "</p>");
+            $('#output').append(member)
+        });
+    };
+    // This code here has the function called everytime the board is changed
+    $('#boards').change(function() {
+        //Grab the new board ID
+        var boardId = $("option:selected", this).val();
+        $('#output').empty();
+
+        Trello.get(
+            //Grab the members from the boardId
+            '/boards/' + boardId + '/members',
+            loadedMembers,
+            function() { console.log("Failed to load members"); }
+        );
+    });
+
+    Trello.authorize({
+        type: "popup",
+        name: "Trello dashboard",
+        expiration: "never",
+        persist: true,
+        scope: {
+            read: true,
+            write: false },
+        expiration: "never",
+        success: loadBoards,
+        error: function() { console.log("Failed authentication"); }
+    });
 </script>
 
 

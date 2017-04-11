@@ -65,3 +65,7 @@ ul li a{
 #sidebar-btn span:nth-child(3){
     width:50%;
 }
+
+form {
+    text-align: center;
+}
