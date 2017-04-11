@@ -12,6 +12,7 @@ var app_component_1 = require("./app.component");
 var ng2_charts_1 = require("ng2-charts");
 var hamburger_component_1 = require("./components/hamburger/hamburger.component");
 var graphs_component_1 = require("./components/graphs/graphs.component");
+var team_component_1 = require("./components/team/team.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,7 +21,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, ng2_charts_1.ChartsModule],
-        declarations: [app_component_1.AppComponent, hamburger_component_1.HamburgerComponent, graphs_component_1.GraphsComponent],
+        declarations: [app_component_1.AppComponent, hamburger_component_1.HamburgerComponent, graphs_component_1.GraphsComponent, team_component_1.TeamComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

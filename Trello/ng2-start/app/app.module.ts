@@ -7,10 +7,10 @@ import { ChartsModule } from 'ng2-charts';
 import { ExampleComponent } from './components/example.component';
 import { HamburgerComponent } from './components/hamburger/hamburger.component';
 import { GraphsComponent } from './components/graphs/graphs.component';
-
+import {TeamComponent} from './components/team/team.component';
 @NgModule({
     imports: [ BrowserModule, ChartsModule ],
-    declarations: [ AppComponent, HamburgerComponent, GraphsComponent ],        //Add the component to the declarations
+    declarations: [ AppComponent, HamburgerComponent, GraphsComponent, TeamComponent ],        //Add the component to the declarations
     bootstrap: [ AppComponent ]
 })
 export class AppModule {}
