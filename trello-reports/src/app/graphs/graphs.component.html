@@ -1,4 +1,7 @@
-<div style="display: block">
+<button (click)="refresh()">Show Chart</button>
+<button (click)="changeType()">Change Chart</button>
+
+<div *ngIf="pieReady && (chartType == 'pie')" style="display: block">
     <canvas width="500" height="500" baseChart
         [data]="pieChartData"
         [labels]="pieChartLabels"
@@ -12,8 +15,8 @@
 <br><br>
 
 <!--Bar Graph-->
-<div style="display: block">
-    <canvas height="400" baseChart
+<div *ngIf="pieReady && (chartType == 'bar')" style="display: block">
+    <canvas height="400" width="400" baseChart
         [datasets]="barChartData"
         [labels]="barChartLabels"
         [options]="barChartOptions"
