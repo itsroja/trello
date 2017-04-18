@@ -2,7 +2,7 @@
 <button (click)="changeType()">Change Chart</button>
 
 <div *ngIf="pieReady && (chartType == 'pie')" style="display: block">
-    <canvas width="500" height="500" baseChart
+    <canvas width="400" height="400" baseChart
         [data]="pieChartData"
         [labels]="pieChartLabels"
         [options]="pieChartOptions"

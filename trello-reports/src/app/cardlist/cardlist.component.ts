@@ -27,7 +27,7 @@ export class CardlistComponent implements OnInit {
     );
     this.cardlist.push(new Card('Forms to sign', 'there are various forms'+
       ' that need to be signed ASAP.')
-    );
+  );
   }
 
 }

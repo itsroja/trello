@@ -5,34 +5,11 @@ import { ChartsModule } from 'ng2-charts';
 @Component({
     selector: 'graphs',
     templateUrl: './graphs.component.html',
-    //styleUrls: ['./graphs.component.css'],
+    styleUrls: ['./graphs.component.css'],
     providers: [TrelloService]
 })
 
 export class GraphsComponent {
-    boardID: string = 'rvPpS2c8';
-    members: string[];
-    totalStoryPoints: number;
-    memberStoryPoints: number[] = [];
-    sprint: string = "1";
-    currentPointCount: number = 0;
-    sprintLists = [];
-    tempMemberPoints: number[] = [];
-    pieReady: boolean = false;
-    chartType: string = "pie";
-
-    constructor(public trelloService: TrelloService, public ref: ChangeDetectorRef){
-        this.getData();
-        this.getLists();
-    }
-
-    refresh(){
-        this.pieReady = true;
-    }
-
-    changeType(){
-        this.chartType = (this.chartType == "pie") ? "bar" : "pie";
-    }
 
     //******************************************Pie Chart*********************************************//
     public pieChartOptions:any = {
@@ -59,23 +36,75 @@ export class GraphsComponent {
     public barChartOptions:any = {
         scaleShowVerticalLines: false,
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
     };
 
-    public barChartLabels:string[] = [];//['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+    public barChartLabels:string[] = [];
     public barChartType:string = 'bar';
     public barChartLegend:boolean = true;
 
-    public barChartData:any[] = [{data: [], label: 'Story Points Completed'}];/*[
-        {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-        {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
-    ];*/
+    public barChartData:any[] = [{data: [], label: 'Story Points Completed'}];
     //*******************************************************************************************//
 
-    getData(){
-        this.trelloService.trello.get('/boards/' + this.boardID + '/members', (members) => this.setMembers(members));
+    boards = [];
+    boardID: string = 'rvPpS2c8';
+    currentBoardName: string = "Trello Reporting Website";
+    currentBoard: any;
+    completedBoard: any;
+    members: string[];
+    totalStoryPoints: number;
+    memberStoryPoints: number[] = [];
+    sprint: number = 1;
+    currentPointCount: number = 0;
+    sprintLists = [];
+    currentSprintLists = [];
+    tempMemberPoints: number[] = [];
+    pieReady: boolean = false;
+    chartType: string = "pie";
+
+    constructor(public trelloService: TrelloService, public ref: ChangeDetectorRef){
+        this.getBoards();
     }
 
+    refresh(){
+        this.pieReady = true;
+    }
+
+    changeType(){
+        this.chartType = (this.chartType == "pie") ? "bar" : "pie";
+    }
+
+    //Retrieves all the boards belonging to the member that is logged in
+    getBoards(){
+        this.trelloService.trello.get('/member/me/boards?lists=all', (boards) => this.setBoards(boards), (error) => console.log(error));
+    }
+
+    //Sets an array of boards and the completed board and the current board we are interested in
+    setBoards(boards){
+        this.boards = boards;
+        for(let board of boards){
+            if(board.name == "Completed")
+                this.completedBoard = board;
+            if(board.name == this.currentBoardName)
+                this.currentBoard = board;
+        }
+        this.getData();
+        this.getLists();
+    }
+
+    //Pie chart
+    getData(){
+        this.trelloService.trello.get('/boards/' + this.currentBoard.id + '/members', (members) => this.setMembers(members));
+    }
+
+    //Pie chart labels
     setMembers(members){
         this.members = members;
         var m = [];
@@ -88,20 +117,32 @@ export class GraphsComponent {
     }
 
     getLists(){
-        this.trelloService.trello.get('/boards/' + this.boardID + '/lists?cards=all', (lists) => this.setLists(lists));
+        //this.trelloService.trello.get('/boards/' + this.currentBoard.id + '/lists?cards=all', (lists) => this.setLists(lists));
+        this.trelloService.trello.get('/boards/' + this.completedBoard.id + '/lists?cards=all', (lists) => this.setLists(lists));
     }
 
     setLists(lists){
         for(let list of lists){
-            if(list.name.includes("Sprint " + this.sprint) && !list.name.includes("Complete")){
+            if(list.name.includes("Sprint") || list.name.includes("sprint")){
                 this.sprintLists.push(list);
             }
         }
+        this.bargraphLists(lists);
+        this.trelloService.trello.get('/boards/' + this.currentBoard.id + '/lists?cards=all', (lists) => this.setLists2(lists));
+    }
 
-        for(let list of this.sprintLists){
+    setLists2(lists){
+        for(let list of lists){
+            if(list.name.includes("Sprint") || list.name.includes("sprint")){
+                this.currentSprintLists.push(list);
+            }
+        }
+
+        this.sprint = this.sprintLists.length + 1;
+
+        for(let list of this.currentSprintLists){
             this.trelloService.trello.get('/list/' + list.id + '/cards', (cards) => this.filterCards(cards));
         }
-        this.bargraphLists(lists);
         this.ref.markForCheck();
     }
 
@@ -127,18 +168,15 @@ export class GraphsComponent {
     }
 
     bargraphLists(lists){
-        var sprintCompleteLists = [];
+        var sprints = [];
         for(let list of lists){
-            if(list.name.includes("Sprint") && list.name.includes("Complete")){
-                sprintCompleteLists.push(list);
-            }
+            if(list.name.includes("Sprint"))
+                sprints.push(list);
         }
-
-        for(let list of sprintCompleteLists){
+        for(let list of sprints){
             var pointCount: number = 0;
             this.barChartLabels.push(list.name);
             for(let card of list.cards){
-                console.log(card.name);
                 pointCount += Number(card.name.substring(1,2));
             }
             this.barChartData[0].data.push(pointCount);
