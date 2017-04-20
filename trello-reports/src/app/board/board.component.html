@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-default" *ngIf="this.myBoard">
   <div class="panel-heading">
     <h3 class="panel-title">{{this.myBoard.title}}</h3>
   </div>
@@ -10,5 +10,5 @@
       <cardlist></cardlist>
       <cardlist></cardlist>
     </div>
-</div>
+  </div>
 </div>
