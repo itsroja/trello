@@ -7,7 +7,7 @@ import { Board } from '../models/board';
 
 @Injectable()
 export class BroadcastService {
-  private _boardIdBroadcast: Subject<number>;
+  private _boardIdBroadcast: Subject<string>;
 
   constructor() {
     this._boardIdBroadcast = new Subject();
