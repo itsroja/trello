@@ -5,16 +5,18 @@
 
 
     <div  *ngIf="visible">
-        <ul>
-            <li><a>Main Page</a></li>
-            <li><a>Team Members</a></li>
-            <li><a>Graphs and Data</a></li>
-            <li><a>Completed Board</a></li>
-            <li><a href="javascript:void(0)" onclick="exportExcel();">Export to Excel</a></li>
-            <li><a href="javascript:void(0)" onclick="tba();">Change Completed Board</a></li>
-            <li><a href="javascript:void(0)" onclick="tba();">Change Default Board</a></li>
-            <li><a href="javascript:void(0)" onclick="tba();">Last Accessed Board</a></li>
-        </ul>
+      <table style="width:100%" >
+        <tr>
+          <th>Main Page</th>
+          <th>Team Members</th>
+          <th>Graphs and Data</th>
+          <th>Completed Board</th>
+          <th><a href="javascript:void(0)" onclick="exportExcel();">Export to Excel</a></th>
+          <th><a href="javascript:void(0)" onclick="tba();">Change Completed Board</a></th>
+          <th><a href="javascript:void(0)" onclick="tba();">Change Default Board</a></th>
+          <th><a href="javascript:void(0)" onclick="tba();">Last Accessed Board</a></th>
+        </tr>
+      </table>
     </div>
 </div>
 <!--
