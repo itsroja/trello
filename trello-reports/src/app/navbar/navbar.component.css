@@ -7,8 +7,8 @@
 	border-color:#ccc;
 }
 .stylish-input-group button{
-    border:0;
-    background:transparent;
+  border:0;
+  background:transparent;
 }
 .dropdown-toggle {
   width: 7em;
@@ -16,8 +16,12 @@
   margin-top: -0.5em;
 }
 button {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .navbar {
   margin-bottom: 0px;
+}
+
+#navbarHamburger {
+  width: 5%;
 }
