@@ -7,13 +7,19 @@ import { Board } from '../models/board';
 
 @Injectable()
 export class BroadcastService {
-  private _boardIdBroadcast: Subject<number>;
+  private _boardIdBroadcast: Subject<string>;
+  private _boardListUpdateBroadcast: Subject<Array<Board>>;
 
   constructor() {
     this._boardIdBroadcast = new Subject();
+    this._boardListUpdateBroadcast = new Subject();
   }
 
   public getBoardIdBroadcast() {
     return this._boardIdBroadcast;
+  }
+
+  public getBoardListUpdateBroadcast() {
+      return this._boardListUpdateBroadcast;
   }
 }

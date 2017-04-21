@@ -26,16 +26,31 @@ export class BoardComponent implements OnInit {
 
             }
         );
+        broadcastService.getBoardListUpdateBroadcast().subscribe(
+          boards => {
+            this.loadFirst();
+          },
+          err => {
+
+          },
+          () => {
+
+          }
+        );
   }
 
   ngOnInit() {
     /* load the first board by default; will be overridden by broadcastService*/
-    this.loadData(1);
+    this.loadFirst();
   }
 
-  public loadData(id: number) {
+  public loadData(id: string) {
     console.log('loading board with id: ' + id);
     /* fetch the board with the given id */
     this.myBoard = this.dataService.getBoard(id);
+  }
+
+  public loadFirst() {
+    this.myBoard = this.dataService.getFirstBoard();
   }
 }

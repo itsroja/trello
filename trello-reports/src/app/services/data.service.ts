@@ -6,12 +6,16 @@ import { Subject } from 'rxjs/Subject';
 
 import { Card } from '../models/card';
 import { Board } from '../models/board';
+import { TrelloService } from '../services/trello.service';
+import { BroadcastService }  from '../services/broadcast.service';
+
 
 @Injectable()
 export class DataService {
     private _boards: Array<Board>;
 
-    constructor(private http: Http) {
+    constructor(private http: Http, private trelloService: TrelloService,
+        private broadcastService: BroadcastService) {
       var allLists: Array<Array<Card>> = new Array<Array<Card>>();
 
       // TODO: replace this placeholder data by pushing
@@ -29,12 +33,12 @@ export class DataService {
       allLists.push(list1);
 
 
-      var board: Board = new Board('New Hire Onboarding', 1, allLists);
-      var board2: Board = new Board('Number 2', 2, allLists);
+      var board: Board = new Board('New Hire Onboarding', '1', allLists);
+      var board2: Board = new Board('Number 2', 'b', allLists);
 
       this._boards = new Array<Board>();
-      this._boards.push(board);
-      this._boards.push(board2);
+      // this._boards.push(board);
+      // this._boards.push(board2);
 
 
       /* simple demo of making http GET request to API */
@@ -44,15 +48,31 @@ export class DataService {
             console.log(data.json().data);
         });
       */
+        this.trelloService.trello.get('/members/' + '58ca8f04eb51a20b3c2d7f26' + '/boards',
+            (boardData) => {
+              for (let board of boardData) {
+                var innerBoard: Board = new Board(board.name, board.id, null)
+                this._boards.push(innerBoard);
+              }
+
+              this.broadcastService.getBoardListUpdateBroadcast()
+                  .next(this._boards);
+            }, null);
     }
 
-    public getBoard(id: number): Board {
+    public getBoard(id: string): Board {
       for (let board of this._boards) {
         if (board.id === id) {
             return board;
         }
       }
       return null;
+    }
+
+    public getFirstBoard(): Board {
+        if (this._boards && this._boards.length > 0) {
+          return this._boards[0];
+        }
     }
 
     public getBoards(): Array<Board> {
