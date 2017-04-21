@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ChartsModule } from 'ng2-charts';
+import { RouterModule } from '@angular/router';
 
 import { BroadcastService } from './services/broadcast.service';
 import { TrelloService } from './services/trello.service';
@@ -15,8 +16,10 @@ import { CardlistComponent } from './cardlist/cardlist.component';
 import { BoardComponent } from './board/board.component';
 import { HamburgerComponent } from './hamburger/hamburger.component';
 import { GraphsComponent } from './graphs/graphs.component';
-
 import {TeamComponent} from './team/team.component';
+import { homeComponent } from './home.component';
+
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -27,13 +30,15 @@ import {TeamComponent} from './team/team.component';
     BoardComponent,
     HamburgerComponent,
     GraphsComponent,
-    TeamComponent
+    TeamComponent,
+    homeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ChartsModule
+    ChartsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     DataService,
