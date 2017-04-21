@@ -60,7 +60,7 @@ export class GraphsComponent {
     members: string[];
     totalStoryPoints: number;
     memberStoryPoints: number[] = [];
-    sprint: number = 1;
+    sprint: number = 5;
     currentPointCount: number = 0;
     sprintLists = [];
     currentSprintLists = [];
@@ -89,7 +89,7 @@ export class GraphsComponent {
     setBoards(boards){
         this.boards = boards;
         for(let board of boards){
-            if(board.name == "Completed")
+            if(board.name == "Completed" || board.name == "Complete")
                 this.completedBoard = board;
             if(board.name == this.currentBoardName)
                 this.currentBoard = board;
@@ -131,13 +131,14 @@ export class GraphsComponent {
     }
 
     setLists2(lists){
+        this.currentSprintLists = [];
         for(let list of lists){
             if(list.name.includes("Sprint") || list.name.includes("sprint")){
                 this.currentSprintLists.push(list);
             }
         }
 
-        this.sprint = this.sprintLists.length + 1;
+        //this.sprint = this.sprintLists.length + 1;
 
         for(let list of this.currentSprintLists){
             this.trelloService.trello.get('/list/' + list.id + '/cards', (cards) => this.filterCards(cards));
@@ -147,15 +148,21 @@ export class GraphsComponent {
 
     filterCards(cards){
         for(let card of cards){
+            console.log(card.name);
+        }
+        for(let card of cards){
             this.trelloService.trello.get('/cards/' + card.id + '/members', (members) => this.addMemberPoints(members, card));
         }
     }
 
     addMemberPoints(members, card){
+        for(let item of this.pieChartData)
+            item = 0;
         for(let member of members){
             var currMember = this.findMember(member.fullName);
             this.pieChartData[currMember] += Number(card.name.substring(1,2));
         }
+        this.ref.markForCheck();
     }
 
     findMember(name): number{
@@ -179,6 +186,37 @@ export class GraphsComponent {
                 pointCount += Number(card.name.substring(1,2));
             }
             this.barChartData[0].data.push(pointCount);
+        }
+    }
+
+    changeSprint(newSprintNum: string){
+        var newSprint:number = Number(newSprintNum);
+        this.pieReady = false;
+        if(newSprint >= 0 || newSprint <= this.sprintLists.length){
+            if(newSprint == Number(this.sprintLists.length+1)){
+                this.recalculatePieValues(this.currentSprintLists);
+            }else{
+                console.log(this.sprintLists[newSprint-1].name);
+                this.recalculatePieValues(this.sprintLists[newSprint-1]);
+                /*for(var i:number = 0; i < this.sprintLists.length; i++){
+                    if(i == newSprintNum-1){
+                        this.recalculatePieValues(this.sprintLists[i]);
+                        break;
+                    }
+                }*/
+            }
+        }
+    }
+
+    recalculatePieValues(list){
+        for(let item of list){
+            this.trelloService.trello.get('/list/' + item.id + '/cards', (cards) => this.filterCards(cards));
+        }
+    }
+
+    printPieData(){
+        for(let item of this.pieChartData){
+            console.log(item);
         }
     }
 }
