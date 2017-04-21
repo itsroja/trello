@@ -17,7 +17,7 @@ import { BoardComponent } from './board/board.component';
 import { HamburgerComponent } from './hamburger/hamburger.component';
 import { GraphsComponent } from './graphs/graphs.component';
 import {TeamComponent} from './team/team.component';
-import { homeComponent } from './home.component';
+import { HomeComponent } from './home/home.component';
 
 import { routes } from './app.routes';
 
@@ -31,7 +31,7 @@ import { routes } from './app.routes';
     HamburgerComponent,
     GraphsComponent,
     TeamComponent,
-    homeComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

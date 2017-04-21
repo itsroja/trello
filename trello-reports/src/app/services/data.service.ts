@@ -37,8 +37,8 @@ export class DataService {
       var board2: Board = new Board('Number 2', 'b', allLists);
 
       this._boards = new Array<Board>();
-      // this._boards.push(board);
-      // this._boards.push(board2);
+      this._boards.push(board);
+      this._boards.push(board2);
 
 
       /* simple demo of making http GET request to API */
