@@ -58,13 +58,9 @@ export class GraphsComponent {
     currentBoard: any;
     completedBoard: any;
     members: string[];
-    totalStoryPoints: number;
-    memberStoryPoints: number[] = [];
     sprint: number = 5;
-    currentPointCount: number = 0;
     sprintLists = [];
     currentSprintLists = [];
-    tempMemberPoints: number[] = [];
     pieReady: boolean = false;
     chartType: string = "pie";
 
@@ -87,6 +83,7 @@ export class GraphsComponent {
 
     //Sets an array of boards and the completed board and the current board we are interested in
     setBoards(boards){
+      console.log("got boards" + boards[0].name);
         this.boards = boards;
         for(let board of boards){
             if(board.name == "Completed" || board.name == "Complete")
@@ -115,54 +112,43 @@ export class GraphsComponent {
         this.ref.markForCheck();
     }
 
-    getLists(){
-        //this.trelloService.trello.get('/boards/' + this.currentBoard.id + '/lists?cards=all', (lists) => this.setLists(lists));
-        this.trelloService.trello.get('/boards/' + this.completedBoard.id + '/lists?cards=all', (lists) => this.setLists(lists));
-    }
-
-    setLists(lists){
+  getLists(){
+    //this.trelloService.trello.get('/boards/' + this.currentBoard.id + '/lists?cards=all', (lists) => this.setLists(lists));
+    this.trelloService.trello.get('/boards/' + this.completedBoard.id + '/lists?cards=all',
+      (lists) => {
         for(let list of lists){
-            if(list.name.includes("Sprint") || list.name.includes("sprint")){
-                this.sprintLists.push(list);
-            }
+          if(list.name.includes("Sprint") || list.name.includes("sprint")){
+            this.sprintLists.push(list);
+          }
         }
         this.bargraphLists(lists);
-        this.trelloService.trello.get('/boards/' + this.currentBoard.id + '/lists?cards=all', (lists) => this.setLists2(lists));
-    }
+        this.trelloService.trello.get('/boards/' + this.currentBoard.id + '/lists?cards=all',
+            (lists) => {
+              this.currentSprintLists = [];
+              for(let list of lists){
+                if(list.name.includes("Sprint") || list.name.includes("sprint")){
+                  this.currentSprintLists.push(list);
+                }
+              }
+              for(let list of this.currentSprintLists){
+                this.trelloService.trello.get('/list/' + list.id + '/cards', (cards) => this.calculateStoryPoints(cards));
+              }
+              this.ref.markForCheck();
+            });
+      });
+  }
 
-    setLists2(lists){
-        this.currentSprintLists = [];
-        for(let list of lists){
-            if(list.name.includes("Sprint") || list.name.includes("sprint")){
-                this.currentSprintLists.push(list);
-            }
-        }
-
-        //this.sprint = this.sprintLists.length + 1;
-
-        for(let list of this.currentSprintLists){
-            this.trelloService.trello.get('/list/' + list.id + '/cards', (cards) => this.filterCards(cards));
-        }
-        this.ref.markForCheck();
-    }
-
-    filterCards(cards){
+    calculateStoryPoints(cards){
         for(let card of cards){
-            console.log(card.name);
+            this.trelloService.trello.get('/cards/' + card.id + '/members',
+              (members) => {
+                  for(let member of members){
+                      var currMember = this.findMember(member.fullName);
+                      this.pieChartData[currMember] += Number(card.name.substring(1, card.name.indexOf(')')));
+                  }
+                  this.ref.markForCheck();
+              });
         }
-        for(let card of cards){
-            this.trelloService.trello.get('/cards/' + card.id + '/members', (members) => this.addMemberPoints(members, card));
-        }
-    }
-
-    addMemberPoints(members, card){
-        for(let item of this.pieChartData)
-            item = 0;
-        for(let member of members){
-            var currMember = this.findMember(member.fullName);
-            this.pieChartData[currMember] += Number(card.name.substring(1,2));
-        }
-        this.ref.markForCheck();
     }
 
     findMember(name): number{
@@ -181,7 +167,7 @@ export class GraphsComponent {
         }
         for(let list of sprints){
             var pointCount: number = 0;
-            this.barChartLabels.push(list.name);
+            this.barChartLabels.push(list.name.substring(7, 8));
             for(let card of list.cards){
                 pointCount += Number(card.name.substring(1,2));
             }
@@ -190,33 +176,24 @@ export class GraphsComponent {
     }
 
     changeSprint(newSprintNum: string){
+        this.pieChartData = [];
+        for(let item of this.pieChartLabels)
+            this.pieChartData.push(0);
         var newSprint:number = Number(newSprintNum);
-        this.pieReady = false;
-        if(newSprint >= 0 || newSprint <= this.sprintLists.length){
-            if(newSprint == Number(this.sprintLists.length+1)){
-                this.recalculatePieValues(this.currentSprintLists);
-            }else{
-                console.log(this.sprintLists[newSprint-1].name);
-                this.recalculatePieValues(this.sprintLists[newSprint-1]);
-                /*for(var i:number = 0; i < this.sprintLists.length; i++){
-                    if(i == newSprintNum-1){
-                        this.recalculatePieValues(this.sprintLists[i]);
-                        break;
-                    }
-                }*/
-            }
+        if(newSprint == Number(this.sprintLists.length+1)){
+            this.recalculatePieValues(this.currentSprintLists, 2);
+        }else{
+            this.recalculatePieValues(this.sprintLists[newSprint-1], 1);
         }
     }
 
-    recalculatePieValues(list){
-        for(let item of list){
-            this.trelloService.trello.get('/list/' + item.id + '/cards', (cards) => this.filterCards(cards));
+    recalculatePieValues(list, listSize){
+        if(listSize > 1) {
+          for (let item of list)
+            this.trelloService.trello.get('/list/' + item.id + '/cards', (cards) => this.calculateStoryPoints(cards));
         }
-    }
-
-    printPieData(){
-        for(let item of this.pieChartData){
-            console.log(item);
+        else {
+          this.trelloService.trello.get('/list/' + list.id + '/cards', (cards) => this.calculateStoryPoints(cards));
         }
     }
 }

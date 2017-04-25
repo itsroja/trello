@@ -1,5 +1,8 @@
+<br><br>
+
 <button (click)="refresh()">Show Chart</button>
 <button (click)="changeType()">Change Chart</button>
+<input [(ngModel)]="sprint" /><button (click)="changeSprint(sprint)">Change</button>
 
 <div *ngIf="pieReady && (chartType == 'pie')" style="display: block">
     <canvas width="400" height="400" baseChart
@@ -11,9 +14,6 @@
         (chartClick)="chartClicked($event)">
     </canvas>
 </div>
-
-<input [(ngModel)]="sprint" /><button (click)="changeSprint(sprint)">Change</button>
-<button (click)="printPieData()">Print Data</button>
 
 <br><br>
 
@@ -29,3 +29,4 @@
         (chartClick)="chartClicked($event)">
     </canvas>
 </div>
+
