@@ -1,8 +1,9 @@
 <h1>Team Page</h1>
-<select>
-    <option *ngFor="let member of members"(click)="clicked(member.username,member.fullName)">{{member.fullName}}</option>
+<select (change)="clicked($event.target.value)" >
+    <option>Select Team Member</option>
+    <option *ngFor="let member of members" [value]="member.username">{{member.fullName}}</option>
 
-</select>
+</select >
 
 <div *ngIf="isShow">
     <table>
@@ -28,5 +29,6 @@
 
         <tr><th><h4>Completed Story Points</h4></th></tr>
         <tr><td>{{comSP}}</td></tr>
+
     </table>
 </div>
